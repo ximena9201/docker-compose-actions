@@ -14,10 +14,7 @@ jobs:
         run: "docker build . -f ./Dockerfile -t ximena9210/python-web:${{steps.vars.outputs.tag}}"
       - name: "Push the tagged Docker image"
         run: "docker push ximena9210/python-web:${{steps.vars.outputs.tag}}"
-      - name: "Build the latest Docker image"
-        run: "docker build . -f ./Dockerfile -t ximena9210/python-web:latest"
-      - name: "Push the latest Docker image"
-        run: "docker push ximena9210/python-web:latest"
+
 #      - name: Build the stack
 #        run: docker-compose up -d
 #      - name: Test
